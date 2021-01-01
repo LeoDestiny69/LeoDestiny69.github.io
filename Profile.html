@@ -15,7 +15,7 @@
         }
         
         body {
-            font-size: 25px;
+            font-size: 30px;
             color: #000000;
         }
 
@@ -28,7 +28,7 @@
         h1 {
             text-align: center;
             margin: auto;
-            font-size: 60px;
+            font-size: 70px;
             width: 300px;
             border-bottom: 3px solid #333;
         }
@@ -39,8 +39,8 @@
 
         .img img{
             margin: auto;
-            width: 150px;
-            height: 150px;
+            width: 300px;
+            height: 300px;
             background: #333;
             border: 5px solid #fff;
             border-radius: 50%;
@@ -66,8 +66,14 @@
 
 </head>
 <body>
+    <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v9.0" nonce="6Ohcs9Lg">
+        </script>
+
+
     <div class="btn-group">
         <a href="index.html" class="btn btn-dark btn-lg">หน้าแรก</a>
+        <a href="infomation.html" class="btn btn-dark btn-lg">ข้อมูลส่วนตัว</a>
     </div>
     <div class="container-fluid">
     <h1>Profile</h1>
@@ -76,16 +82,18 @@
         <div class="text">
         <span>ชื่อ-นามสกุล</span> : ติณณภพ แซ่ลิ้ม <br>
         <span>ชื่อเล่น     </span> : พรีเมียร์ <br>
-        <span>วันเกิด     </span> : 26 พฤศจิกายน 2545 <br>
-        <span>อายุ       </span> : 18 ปี <br>
-        <span>ศาสนา     </span> : พุทธ <br>
-        <span>สัญชาติ     </span> : ไทย <br>
-        <span>เชื้อชาติ     </span> : ไทย <br>
-        <span>ความสามารถพิเศษ     </span> : HTML VSCODE ว่ายน้ำ <br>
-        <span>เบอร์โทร     </span> : 092-6562626 <br>
-        <span>Contact    </span> : 18 ถนนจักรเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพ 10200 <br>
-        <span>Email      </span> : Destiny_2545@hotmail.com <br>
-        <br>
+        <span>เรียนอยู่</span> : โรงเรียนวัดราชบพิธ <br>
+        <span>ชั้นปีที่</span> : ม.6
+        <span>แผนการเรียน</span> : คณิต-อังกฤษ <br>
+
+        <div class="Fackbook-buttion">
+            
+        </div>
+        <br><br><br>
+
+        <div class="fb-like" data-href="https://leodestiny69.github.io/Profile.html" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div><br><br>
+        <div class="fb-comments" data-href="https://leodestiny69.github.io/Profile.html" data-width="" data-numposts="5"></div><br><br>
+
         <marquee>Thank you for watching My Profile! I hope you will like it.</marquee>
         <script src="js/bootstrap.min.js" ></script>
     </div>
