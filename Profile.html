@@ -15,6 +15,11 @@
             color: #333;
             background-color: #f8f9fa;
             padding-top: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         h1 {
@@ -24,32 +29,125 @@
             border-bottom: 3px solid #333;
             display: inline-block;
             padding-bottom: 10px;
+            animation: fadeInDown 1s;
         }
 
         .profile-img img {
-            width: 200px;
-            height: 200px;
+            width: 500px; 
+            height: 300px; 
             border: 5px solid #fff;
-            border-radius: 50%;
             box-shadow: 0 0 15px rgba(0,0,0,0.3);
             margin: 0 auto;
             display: block;
+            transition: transform 0.3s;
+            object-fit: cover; 
+        }
+
+        .profile-img img:hover {
+            transform: scale(1.1);
         }
 
         .profile-info {
             text-align: center;
             margin-top: 20px;
+            animation: fadeInUp 1s;
         }
 
-        .profile-info span {
+        .about-me {
+            font-size: 50px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 50px;
+            text-decoration: underline; 
+        }
+
+        .skill-info {
+            text-align: left;
+            margin-top: 20px;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .skill-info span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #fff;
+            padding: 0 10px;
+            margin: -30px auto 20px;
+            width: fit-content;
+        }
+
+        .skill-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-info ul li {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-info ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+
+        .divider {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: #333;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .divider-text {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+            margin: 0 10px;
+            display: inline-block;
+            background-color: #fff;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-info span {
             display: block;
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
 
         .btn-group {
-            text-align: center;
+            text-align: right; 
             margin-bottom: 20px;
+            animation: fadeIn 1s;
         }
 
         .container {
@@ -58,20 +156,17 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            max-width: 1200px;
+            animation: fadeIn 1s;
         }
 
         hr {
-            border-color: #333;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .fb-like, .fb-comments {
-            margin: 20px 0;
-            text-align: center;
+            border: none;
+            border-left: 2px dashed #333;
+            height: 100%;
+            width: 1px;
+            margin: 0 auto;
         }
 
         marquee {
@@ -80,33 +175,86 @@
             font-size: 1.2rem;
             color: #333;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="btn-group">
-            <a href="index.html" class="btn btn-dark btn-lg">หน้าแรก</a>
-            <a href="information.html" class="btn btn-dark btn-lg">ข้อมูลส่วนตัว</a>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <div class="btn-group">
+                    <a href="Profile.html" class="btn btn-dark btn-sm rounded-pill">About me</a>
+                    <a href="Certificate.html" class="btn btn-dark btn-sm rounded-pill">Certificate</a>
+                </div>
+            </div>
         </div>
         
-        <h1>This is me</h1>
+        <div class="profile-info">
+            <div class="about-me">About me</div>
+            <br>
+        </div>
 
         <div class="profile-img">
-            <img src="Premier.jpg" alt="Profile Image">
+            <img src="picture/Premier.jpg" alt="Profile Image">
         </div>
 
         <div class="profile-info">
-            <span><strong>ชื่อ-นามสกุล:</strong> ติณณภพ แซ่ลิ้ม</span>
-            <span><strong>ชื่อเล่น:</strong> พรีเมียร์</span>
-            <span><strong>เรียนอยู่:</strong> โรงเรียนวัดราชบพิธ</span>
-            <span><strong>ชั้นปีที่:</strong> ม.6</span>
-            <span><strong>แผนการเรียน:</strong> คณิต-อังกฤษ</span>
+            <h2><strong>Tinnaphop Saelim</strong></h2>
+            <span><strong>Hello!, I am Computer Science student at Bangkok University.</strong></span>
+            <span><strong>I find myself that I have passion in frontend/backend career path</strong></span>
+            <span><strong>and I looking forward to learning more.</strong></span>
+            <span><strong>This website is present myself, skill, activities, project.</strong></span>
+            <span><strong>Hope you enjoy it.</strong></span>
+        </div>
+
+        <div class="skill-info">
+            <span>Skill</span>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+
+        <div class="skill-info">
+            <span>Tool</span>
+            <ul>
+                <li>VSCODE</li>
+                <li>github</li>
+                <li>Figma</li>
+                <li>Canva</li>
+            </ul>
         </div>
 
         <hr>
 
-        <div class="fb-like" data-href="https://leodestiny69.github.io/Profile.html" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
-        <div class="fb-comments" data-href="https://leodestiny69.github.io/Profile.html" data-numposts="5"></div>
+        <div class="contact-info">
+            <span><strong>Contact Information</strong></span>
+            <span>Email: <a href="mailto:tinnaphop.sael@bumail.net">tinnaphop.sael@bumail.net</a></span>
+            <span>Email: <a href="mailto:Destiny_2545@hotmail.com">Destiny_2545@hotmail.com</a></span>
+            <span>Phone: 0926562626</span>
+            <a href="https://www.facebook.com/TinnaphopSSS/" target="_blank">
+                <img src="picture/facebook.png" width="50" height="50">
+            <a href="https://www.instagram.com/ppmier.sl" target="_blank">
+                <img src="picture/ig.png" width="50" height="50">
+            </a>
+            
+        </div>
 
         <marquee>Thank you for watching My Profile! I hope you will like it.</marquee>
     </div>
