@@ -5,112 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-<br>
-<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap" rel="stylesheet">
-    <style type=text/css>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap" rel="stylesheet">
 
+    <style>
         body {
             font-family: 'Mitr', sans-serif;
-        }
-        
-        body {
-            font-size: 30px;
-            color: #000000;
-        }
-
-        span {
-            background: -webkit-linear-gradient(#EECFC4, #000000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            color: #333;
+            background-color: #f8f9fa;
+            padding-top: 20px;
         }
 
         h1 {
             text-align: center;
-            margin: auto;
-            font-size: 70px;
-            width: 300px;
+            font-size: 3rem;
+            margin-bottom: 2rem;
             border-bottom: 3px solid #333;
-        }
-        .img {
-            margin: auto;
-            text-align: center;
+            display: inline-block;
+            padding-bottom: 10px;
         }
 
-        .img img{
-            margin: auto;
-            width: 300px;
-            height: 300px;
-            background: #333;
+        .profile-img img {
+            width: 200px;
+            height: 200px;
             border: 5px solid #fff;
             border-radius: 50%;
-
-            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            margin: 0 auto;
+            display: block;
         }
 
-        p:hover, h1:hover, a:hover {
-            background-color: white;
+        .profile-info {
+            text-align: center;
+            margin-top: 20px;
         }
 
-        div {
-            box-shadow: 3px 5px #000000;
+        .profile-info span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
-        div{
-            background-color: #FFCC99;
-            
+        .btn-group {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         hr {
-            display: block;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            margin-left: auto;
-            margin-right: auto;
-            border-style: inset;
-            border-width: 5px;
+            border-color: #333;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
-    </style>
+        .fb-like, .fb-comments {
+            margin: 20px 0;
+            text-align: center;
+        }
 
+        marquee {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v9.0" nonce="6Ohcs9Lg">
-        </script>
-
-
-    <div class="btn-group">
-        <a href="index.html" class="btn btn-dark btn-lg">หน้าแรก</a>
-        <a href="infomation.html" class="btn btn-dark btn-lg">ข้อมูลส่วนตัว</a>
-    </div>
-    <div class="container-fluid">
-    <h1>This is me</h1>
-    <br>
-    <div class="img">
-        <img src="Premier.jpg" width="200" height="200">
-        <div class="text">
-            <br>
-        <span>ชื่อ-นามสกุล</span> : ติณณภพ แซ่ลิ้ม <br>
-        <span>ชื่อเล่น     </span> : พรีเมียร์ <br>
-        <span>เรียนอยู่</span> : โรงเรียนวัดราชบพิธ <br>
-        <span>ชั้นปีที่</span> : ม.6 <br>
-        <span>แผนการเรียน</span> : คณิต-อังกฤษ <br><br><br>
-        <hr style = "width: 50%;">
-
-        <div class="Fackbook-buttion">
-            
+    <div class="container">
+        <div class="btn-group">
+            <a href="index.html" class="btn btn-dark btn-lg">หน้าแรก</a>
+            <a href="information.html" class="btn btn-dark btn-lg">ข้อมูลส่วนตัว</a>
         </div>
-        <br><br><br>
+        
+        <h1>This is me</h1>
 
-        <div class="fb-like" data-href="https://leodestiny69.github.io/Profile.html" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div><br><br>
-        <div class="fb-comments" data-href="https://leodestiny69.github.io/Profile.html" data-width="" data-numposts="5"></div><br><br>
+        <div class="profile-img">
+            <img src="Premier.jpg" alt="Profile Image">
+        </div>
+
+        <div class="profile-info">
+            <span><strong>ชื่อ-นามสกุล:</strong> ติณณภพ แซ่ลิ้ม</span>
+            <span><strong>ชื่อเล่น:</strong> พรีเมียร์</span>
+            <span><strong>เรียนอยู่:</strong> โรงเรียนวัดราชบพิธ</span>
+            <span><strong>ชั้นปีที่:</strong> ม.6</span>
+            <span><strong>แผนการเรียน:</strong> คณิต-อังกฤษ</span>
+        </div>
+
+        <hr>
+
+        <div class="fb-like" data-href="https://leodestiny69.github.io/Profile.html" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+        <div class="fb-comments" data-href="https://leodestiny69.github.io/Profile.html" data-numposts="5"></div>
 
         <marquee>Thank you for watching My Profile! I hope you will like it.</marquee>
-        <script src="js/bootstrap.min.js" ></script>
     </div>
-    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
