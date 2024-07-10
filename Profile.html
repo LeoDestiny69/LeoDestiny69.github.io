@@ -33,21 +33,6 @@
             animation: fadeInDown 1s, text-animation 5s infinite;
         }
 
-        @keyframes text-animation {
-            0%, 100% {
-                color: #fff;
-            }
-            25% {
-                color: #ffc107;
-            }
-            50% {
-                color: #17a2b8;
-            }
-            75% {
-                color: #28a745;
-            }
-        }
-
         .profile-img img {
             width: 500px; 
             height: 300px; 
@@ -67,7 +52,7 @@
         .profile-info {
             text-align: center;
             margin-top: 20px;
-            animation: fadeInUp 1s;
+            animation: fadeInUp 1s, text-animation 5s infinite;
         }
 
         .about-me {
@@ -89,21 +74,6 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             animation: border-animation 5s infinite;
-        }
-
-        @keyframes border-animation {
-            0%, 100% {
-                border-color: #adb5bd;
-            }
-            25% {
-                border-color: #ffc107;
-            }
-            50% {
-                border-color: #17a2b8;
-            }
-            75% {
-                border-color: #28a745;
-            }
         }
 
         .skill-info span {
@@ -284,6 +254,85 @@
                 padding: 10px;
             }
         }
+
+        /* Additional Effects */
+        .profile-info span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #fff;
+            animation: text-animation 5s infinite;
+        }
+
+        .profile-info {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInUp 1s, text-animation 5s infinite;
+        }
+
+        @keyframes text-animation {
+            0%, 100% {
+                color: #fff;
+            }
+            25% {
+                color: #fff;
+            }
+            50% {
+                color: #fff;
+            }
+            75% {
+                color: #fff;
+            }
+        }
+
+        .btn-group .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-group .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info a img {
+            transition: transform 0.3s;
+        }
+
+        .contact-info a img:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Button Click Animation */
+        document.addEventListener("DOMContentLoaded", function() {
+            // Add animation to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                button.addEventListener('mouseup', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
     </style>
 </head>
 <body>
@@ -299,7 +348,6 @@
         
         <div class="profile-info">
             <div class="about-me">About me</div>
-            <br>
         </div>
 
         <div class="profile-img">
@@ -308,11 +356,11 @@
 
         <div class="profile-info">
             <h2><strong>Tinnaphop Saelim</strong></h2>
-            <span><strong>Hello!, I am Computer Science student at Bangkok University.</strong></span>
-            <span><strong>I find myself that I have passion in frontend/backend career path</strong></span>
-            <span><strong>and I looking forward to learning more.</strong></span>
-            <span><strong>This website is present myself, skill, activities, project.</strong></span>
-            <span><strong>Hope you enjoy it.</strong></span>
+            <span>Hello!, I am Computer Science student at Bangkok University.</span>
+            <span>I find myself that I have passion in frontend/backend career path</span>
+            <span>and I looking forward to learning more.</span>
+            <span>This website is present myself, skill, activities, project.</span>
+            <span>Hope you enjoy it.</span>
         </div>
 
         <div class="skill-info">
@@ -338,7 +386,7 @@
         <hr>
 
         <div class="contact-info">
-            <span><strong>Contact Information</strong></span>
+            <span>Contact Information</span>
             <span>Email: <a href="mailto:tinnaphop.sael@bumail.net">tinnaphop.sael@bumail.net</a></span>
             <span>Email: <a href="mailto:Destiny_2545@hotmail.com">Destiny_2545@hotmail.com</a></span>
             <span>Phone: 0926562626</span>
@@ -356,5 +404,29 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Add animation to profile image hover
+            const profileImg = document.querySelector('.profile-img img');
+            profileImg.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            profileImg.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+
+            // Add animation to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                button.addEventListener('mouseup', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

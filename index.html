@@ -1,3 +1,4 @@
+<!-- HTML with water drop animation -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,6 @@
             text-align: center;
             background-color: rgba(118, 74, 188, 0.7); 
         }
-
 
         h1 {
             font-size: 60px;
@@ -67,6 +67,7 @@
         }
 
         .container {
+            position: relative; /* Ensure the container is relative for absolute positioning */
             background: rgba(0, 0, 0, 0.7);
             padding: 50px;
             border-radius: 15px;
@@ -74,6 +75,31 @@
             animation: fadeIn 2s;
             width: 80%;
             max-width: 600px;
+        }
+
+        /* CSS Animation for water drop */
+        @keyframes waterDrop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+        }
+
+        /* Apply animation to an element */
+        .water-drop {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff; /* Adjust color as needed */
+            border-radius: 50%;
+            animation: waterDrop 2s ease-out infinite;
         }
 
         @keyframes fadeIn {
@@ -203,10 +229,45 @@
         <div class="divider"></div>
         <h2>Welcome to my portfolio.</h2>
         <a class="btn btn-light btn-lg" href="Profile.html">Enter</a>
+        
+        <!-- Water drop animation -->
+        <div class="water-drop"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript for additional animations
+        $(document).ready(function() {
+            // Example: Fade in the container on page load
+            $(".container").fadeIn(1500);
+            
+            // Example: Animate the button on hover
+            $(".btn-light").hover(function() {
+                $(this).animate({ 
+                    fontSize: "1.6rem",
+                    backgroundColor: "#e0e0e0",
+                    boxShadow: "0 6px 10px rgba(0, 0, 0, 0.15)"
+                }, 200);
+            }, function() {
+                $(this).animate({ 
+                    fontSize: "1.5rem",
+                    backgroundColor: "#f8f9fa",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+                }, 200);
+            });
+
+            // Example: Scroll-triggered animation
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 500) {
+                    $(".container").css("background-color", "rgba(0, 0, 0, 0.9)");
+                } else {
+                    $(".container").css("background-color", "rgba(0, 0, 0, 0.7)");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
