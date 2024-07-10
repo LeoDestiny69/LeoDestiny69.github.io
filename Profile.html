@@ -12,24 +12,40 @@
         body {
             font-family: 'Mitr', sans-serif;
             font-size: 18px;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding-top: 20px;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            animation: bg-animation 10s infinite;
         }
 
         h1 {
             text-align: center;
             font-size: 3rem;
             margin-bottom: 2rem;
-            border-bottom: 3px solid #333;
+            border-bottom: 3px solid #adb5bd;
             display: inline-block;
             padding-bottom: 10px;
-            animation: fadeInDown 1s;
+            animation: fadeInDown 1s, text-animation 5s infinite;
+        }
+
+        @keyframes text-animation {
+            0%, 100% {
+                color: #fff;
+            }
+            25% {
+                color: #ffc107;
+            }
+            50% {
+                color: #17a2b8;
+            }
+            75% {
+                color: #28a745;
+            }
         }
 
         .profile-img img {
@@ -41,6 +57,7 @@
             display: block;
             transition: transform 0.3s;
             object-fit: cover; 
+            border-radius: 10px;
         }
 
         .profile-img img:hover {
@@ -56,18 +73,37 @@
         .about-me {
             font-size: 50px;
             font-weight: bold;
-            color: #333;
+            color: #fff;
             margin-top: 50px;
             text-decoration: underline; 
+            animation: text-animation 5s infinite;
         }
 
         .skill-info {
             text-align: left;
             margin-top: 20px;
-            border: 1px solid #333;
+            border: 1px solid #adb5bd;
             padding: 20px;
             border-radius: 10px;
-            background-color: #f8f9fa;
+            background-color: #343a40;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            animation: border-animation 5s infinite;
+        }
+
+        @keyframes border-animation {
+            0%, 100% {
+                border-color: #adb5bd;
+            }
+            25% {
+                border-color: #ffc107;
+            }
+            50% {
+                border-color: #17a2b8;
+            }
+            75% {
+                border-color: #28a745;
+            }
         }
 
         .skill-info span {
@@ -76,10 +112,13 @@
             font-size: 1.3rem;
             font-weight: bold;
             text-align: center;
-            background-color: #fff;
+            background-color: #007bff;
+            color: #fff;
             padding: 0 10px;
             margin: -30px auto 20px;
             width: fit-content;
+            border-radius: 5px;
+            animation: bg-animation 5s infinite;
         }
 
         .skill-info ul {
@@ -92,6 +131,7 @@
             margin-bottom: 5px;
             padding-left: 20px;
             position: relative;
+            color: #fff;
         }
 
         .skill-info ul li::before {
@@ -112,22 +152,23 @@
             display: block;
             width: 2px;
             height: 100%;
-            background-color: #333;
+            background-color: #adb5bd;
             margin: 0 auto;
             position: absolute;
             top: 0;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            animation: bg-animation 5s infinite;
         }
 
         .divider-text {
             font-size: 1.2rem;
-            color: #333;
+            color: #fff;
             font-weight: bold;
             margin: 0 10px;
             display: inline-block;
-            background-color: #fff;
+            background-color: #343a40;
             padding: 0 10px;
             position: relative;
             z-index: 1;
@@ -136,6 +177,7 @@
         .contact-info {
             text-align: center;
             margin-top: 20px;
+            color: #fff;
         }
 
         .contact-info span {
@@ -151,7 +193,7 @@
         }
 
         .container {
-            background-color: #fff;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -163,7 +205,7 @@
 
         hr {
             border: none;
-            border-left: 2px dashed #333;
+            border-left: 2px dashed #adb5bd;
             height: 100%;
             width: 1px;
             margin: 0 auto;
@@ -173,7 +215,27 @@
             margin-top: 20px;
             text-align: center;
             font-size: 1.2rem;
-            color: #333;
+            color: #fff;
+        }
+
+        .btn-group .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-group .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info a img {
+            transition: transform 0.3s;
+        }
+
+        .contact-info a img:hover {
+            transform: scale(1.2);
         }
 
         @keyframes fadeIn {
@@ -190,6 +252,38 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-img img {
+                width: 100%;
+                height: auto;
+            }
+
+            .about-me {
+                font-size: 2rem;
+            }
+
+            .skill-info span {
+                font-size: 1rem;
+            }
+
+            .skill-info ul li {
+                font-size: 0.9rem;
+            }
+
+            .contact-info span {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -197,8 +291,8 @@
         <div class="row">
             <div class="col-md-12 text-right">
                 <div class="btn-group">
-                    <a href="Profile.html" class="btn btn-dark btn-sm rounded-pill">About me</a>
-                    <a href="Certificate.html" class="btn btn-dark btn-sm rounded-pill">Certificate</a>
+                    <a href="Profile.html" class="btn btn-sm rounded-pill">About me</a>
+                    <a href="Certificate.html" class="btn btn-sm rounded-pill">Certificate</a>
                 </div>
             </div>
         </div>
@@ -250,10 +344,10 @@
             <span>Phone: 0926562626</span>
             <a href="https://www.facebook.com/TinnaphopSSS/" target="_blank">
                 <img src="picture/facebook.png" width="50" height="50">
+            </a>
             <a href="https://www.instagram.com/ppmier.sl" target="_blank">
                 <img src="picture/ig.png" width="50" height="50">
             </a>
-            
         </div>
 
         <marquee>Thank you for watching My Profile! I hope you will like it.</marquee>

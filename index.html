@@ -13,32 +13,37 @@
             font-family: 'Mitr', sans-serif;
             font-style: oblique;
             color: #f8f9fa;
-            background-color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
+            background-color: rgba(118, 74, 188, 0.7); 
         }
+
 
         h1 {
             font-size: 60px;
             margin-bottom: 20px;
-            color: #f8f9fa;
+            color: #fff;
             animation: fadeInDown 1s;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
-            color: #f8f9fa;
+            color: #fff;
             margin-bottom: 30px;
             animation: fadeInUp 1s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .divider {
             width: 60%;
             height: 2px;
-            background-color: #f8f9fa;
+            background-color: #fff;
             margin: 20px auto;
             animation: fadeIn 1.5s;
         }
@@ -50,21 +55,25 @@
             background-color: #f8f9fa;
             border: none;
             color: #333;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .btn-light:hover {
             background-color: #e0e0e0;
             transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
         .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
             animation: fadeIn 2s;
+            width: 80%;
+            max-width: 600px;
         }
 
         @keyframes fadeIn {
@@ -91,6 +100,99 @@
             }
             60% {
                 transform: translateY(-15px);
+            }
+        }
+
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .btn-light {
+                font-size: 1.3rem;
+                padding: 8px 18px;
+            }
+
+            .container {
+                padding: 40px;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .btn-light {
+                font-size: 1.2rem;
+                padding: 8px 16px;
+            }
+
+            .container {
+                padding: 30px;
+                width: 90%;
+            }
+
+            body {
+                background-size: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .btn-light {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+
+            body {
+                background-size: auto;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .btn-light {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+
+            .container {
+                padding: 15px;
+                width: 100%;
+            }
+
+            body {
+                background-size: auto;
             }
         }
     </style>
