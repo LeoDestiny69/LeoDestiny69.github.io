@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
 
     <style>
         body {
@@ -14,7 +15,7 @@
             font-size: 18px;
             color: #fff;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding-top: 20px;
+            padding-top: 80px; 
             margin: 0;
             display: flex;
             justify-content: center;
@@ -33,400 +34,155 @@
             animation: fadeInDown 1s, text-animation 5s infinite;
         }
 
-        .profile-img img {
-            width: 500px; 
-            height: 300px; 
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-            margin: 0 auto;
-            display: block;
-            transition: transform 0.3s;
-            object-fit: cover; 
-            border-radius: 10px;
-        }
-
-        .profile-img img:hover {
-            transform: scale(1.1);
-        }
-
-        .profile-info {
-            text-align: center;
-            margin-top: 20px;
-            animation: fadeInUp 1s, text-animation 5s infinite;
-        }
-
-        .about-me {
-            font-size: 50px;
-            font-weight: bold;
-            color: #fff;
-            margin-top: 50px;
-            text-decoration: underline; 
-            animation: text-animation 5s infinite;
-        }
-
-        .skill-info {
-            text-align: left;
-            margin-top: 20px;
-            border: 1px solid #adb5bd;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #343a40;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            animation: border-animation 5s infinite;
-        }
-
-        .skill-info span {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            padding: 0 10px;
-            margin: -30px auto 20px;
-            width: fit-content;
-            border-radius: 5px;
-            animation: bg-animation 5s infinite;
-        }
-
-        .skill-info ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .skill-info ul li {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            padding-left: 20px;
-            position: relative;
-            color: #fff;
-        }
-
-        .skill-info ul li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #007bff;
-        }
-
-        .divider {
-            text-align: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .divider::before {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 100%;
-            background-color: #adb5bd;
-            margin: 0 auto;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bg-animation 5s infinite;
-        }
-
-        .divider-text {
-            font-size: 1.2rem;
-            color: #fff;
-            font-weight: bold;
-            margin: 0 10px;
-            display: inline-block;
-            background-color: #343a40;
-            padding: 0 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-            color: #fff;
-        }
-
-        .contact-info span {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .btn-group {
-            text-align: right; 
-            margin-bottom: 20px;
-            animation: fadeIn 1s;
-        }
-
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-            width: 100%;
-            max-width: 1200px;
-            animation: fadeIn 1s;
-        }
-
-        hr {
-            border: none;
-            border-left: 2px dashed #adb5bd;
-            height: 100%;
-            width: 1px;
-            margin: 0 auto;
-        }
-
-        marquee {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        .btn-group .btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-group .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .contact-info a img {
-            transition: transform 0.3s;
-        }
-
-        .contact-info a img:hover {
-            transform: scale(1.2);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .profile-img img {
-                width: 100%;
-                height: auto;
-            }
-
-            .about-me {
-                font-size: 2rem;
-            }
-
-            .skill-info span {
-                font-size: 1rem;
-            }
-
-            .skill-info ul li {
-                font-size: 0.9rem;
-            }
-
-            .contact-info span {
-                font-size: 0.9rem;
-            }
-
-            .container {
-                padding: 10px;
-            }
-        }
-
-        /* Additional Effects */
-        .profile-info span {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            color: #fff;
-            animation: text-animation 5s infinite;
-        }
-
-        .profile-info {
-            text-align: center;
-            margin-top: 20px;
-            animation: fadeInUp 1s, text-animation 5s infinite;
-        }
-
-        @keyframes text-animation {
-            0%, 100% {
-                color: #fff;
-            }
-            25% {
-                color: #fff;
-            }
-            50% {
-                color: #fff;
-            }
-            75% {
-                color: #fff;
-            }
-        }
-
-        .btn-group .btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-group .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .contact-info a img {
-            transition: transform 0.3s;
-        }
-
-        .contact-info a img:hover {
-            transform: scale(1.2);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Button Click Animation */
-        document.addEventListener("DOMContentLoaded", function() {
-            // Add animation to buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(button => {
-                button.addEventListener('mousedown', function() {
-                    this.style.transform = 'scale(0.95)';
-                });
-                button.addEventListener('mouseup', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-        });
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container-fluid">
+            <!-- Brand Name -->
+            <a class="navbar-brand" href="index.html">Tinnaphop</a>
+
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Profile.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Certificate.html">Certificate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-right">
-                <div class="btn-group">
-                    <a href="Profile.html" class="btn btn-sm rounded-pill">About me</a>
-                    <a href="Certificate.html" class="btn btn-sm rounded-pill">Certificate</a>
+        <!-- ส่วนของโปรไฟล์ -->
+        <div class="profile-info text-center">
+            <h1 class="about-me">About me</h1>
+            <div class="profile-img">
+                <img src="picture/Premier.jpg" alt="Profile Image">
+            </div>
+        </div>
+
+        <!-- ข้อมูลเพิ่มเติม -->
+        <div class="profile-info text-center">
+            <h2><strong>Tinnaphop Saelim</strong></h2>
+            <span>Hello! I am a Computer Science student at Bangkok University.</span>
+            <span>I am passionate about frontend/backend development and am eager to learn more.</span>
+            <span>This website showcases my skills, activities, and projects. Hope you enjoy it!</span>
+        </div>
+
+        <!-- ข้อมูลทักษะ -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="skill-info">
+                    <span>Skills</span>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="skill-info">
+                    <span>Tools</span>
+                    <ul>
+                        <li>VSCode</li>
+                        <li>GitHub</li>
+                        <li>Figma</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="skill-info">
+                    <span>Education</span>
+                    <ul>
+                        <li>
+                            <img src="picture\bu_logo.png" alt="Bangkok University" width="150" height="50" style="vertical-align: middle; margin-right: 10px;">
+                            Bangkok University Bachelor of Science Information Technology Computer Science (GPA 3.27)
+
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <div class="container mt-5">
+            <div class="bg-dark p-4 rounded shadow">
+                <div class="d-flex justify-content-between align-items-start">
+                    <!-- Contact Form -->
+                    <div class="flex-fill me-4" style="min-width: 60%;">
+                        <h3 class="text-light mb-4">Send Me a Message</h3>
+                        <form action="https://formspree.io/f/your-form-id" method="POST">
+                            <div class="form-row">
+                                <div class="form-group col-md-11 mb-3">
+                                    <label for="name" class="text-light">Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group col-md-11 mb-3">
+                                    <label for="email" class="text-light">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-11 mb-3">
+                                <label for="message" class="text-light">Message:</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Send</button>
+                        </form>
+                    </div>
+        
+                    <!-- Contact Information -->
+                    <div class="flex-shrink-1 text-light p-4 rounded" style="width: 300px;">
+                        <h2 class="mb-4">Contact Information</h2>
+                        <p><strong>Email:</strong> <a href="mailto:tinnaphop.sael@bumail.net" class="text-primary">tinnaphop.sael@bumail.net</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:Destiny_2545@hotmail.com" class="text-primary">Destiny_2545@hotmail.com</a></p>
+                        <p><strong>Phone:</strong> 092-656-2626</p>
+                        <div class="d-flex">
+                            <a href="https://www.facebook.com/TinnaphopSSS/" target="_blank" class="me-3">
+                                <img src="picture/facebook.png" width="50" height="50" class="rounded-circle border border-light">
+                            </a>
+                            <a href="https://www.instagram.com/ppmier.sl" target="_blank">
+                                <img src="picture/ig.png" width="50" height="50" class="rounded-circle border border-light">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="profile-info">
-            <div class="about-me">About me</div>
-        </div>
+        
 
-        <div class="profile-img">
-            <img src="picture/Premier.jpg" alt="Profile Image">
-        </div>
 
-        <div class="profile-info">
-            <h2><strong>Tinnaphop Saelim</strong></h2>
-            <span>Hello!, I am Computer Science student at Bangkok University.</span>
-            <span>I find myself that I have passion in frontend/backend career path</span>
-            <span>and I looking forward to learning more.</span>
-            <span>This website is present myself, skill, activities, project.</span>
-            <span>Hope you enjoy it.</span>
-        </div>
 
-        <div class="skill-info">
-            <span>Skill</span>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>MySQL</li>
-            </ul>
-        </div>
+        
 
-        <div class="skill-info">
-            <span>Tool</span>
-            <ul>
-                <li>VSCODE</li>
-                <li>github</li>
-                <li>Figma</li>
-                <li>Canva</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="contact-info">
-            <span>Contact Information</span>
-            <span>Email: <a href="mailto:tinnaphop.sael@bumail.net">tinnaphop.sael@bumail.net</a></span>
-            <span>Email: <a href="mailto:Destiny_2545@hotmail.com">Destiny_2545@hotmail.com</a></span>
-            <span>Phone: 0926562626</span>
-            <a href="https://www.facebook.com/TinnaphopSSS/" target="_blank">
-                <img src="picture/facebook.png" width="50" height="50">
-            </a>
-            <a href="https://www.instagram.com/ppmier.sl" target="_blank">
-                <img src="picture/ig.png" width="50" height="50">
-            </a>
-        </div>
-
-        <marquee>Thank you for watching My Profile! I hope you will like it.</marquee>
+        <marquee>Thank you for visiting my profile! Hope you enjoy it.</marquee>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Add animation to profile image hover
-            const profileImg = document.querySelector('.profile-img img');
-            profileImg.addEventListener('mouseover', function() {
-                this.style.transform = 'scale(1.1)';
-            });
-            profileImg.addEventListener('mouseout', function() {
-                this.style.transform = 'scale(1)';
-            });
-
-            // Add animation to buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(button => {
-                button.addEventListener('mousedown', function() {
-                    this.style.transform = 'scale(0.95)';
-                });
-                button.addEventListener('mouseup', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
